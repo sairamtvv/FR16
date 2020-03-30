@@ -40,31 +40,132 @@ Lets assume we have a complex biological media consisting of both the virus and 
 \section{Methodology}
 Our approach would be to utilize, IV  characteristics, impedance spectroscopy, charging discharging of the virus solution to develop a micro-controller/FPGA (Field programmable Gate arrays) based technology to detect these viruses quantitatively.
 
+\subsection{Physical interpretation}
 
-To this end the work flow can be segmented into three major parts:
+\subsubsection{Physical interpretation of our methodology}
+When the electric field propagated through a medium in which virus particles are suspended, the phase and amplitude of the field changes. The change depends on the concentration of the virus present in the medium. When electric field passes through the medium the separation of charges takes place in the virus. Thus the virus could be considered as a dipole comprising of equal and opposite charges at a separation. Now, the medium with the viruses can be interpreted as dopants (impurities) in a non-intrinsic semi-conductor material. Thus quantifying the viruses now boils down to calculating the dopant concentration by de-embedding the contribution from the reference medium. Even though the concentration of the virus is very small as compared to medium. It still produces a significant change in the electrical parameters which can be attributed to the accumulated charge on the virus as discussed above.
+
+\subsection{Explanation regarding how de-embedding of reference medium is acheived}
+The antibodies are conjugated onto a non-reactive surface and then covid-19 antigens are attached and isolated. (The description of this process is given below). This solution is what we term the medium. This is the reference medium because, later the virus is lysed and the change of impedance of the lysed solution  with respect to the  base solution (reference medium) is utilized to quantify the virus.  Two methods can  be followed to remove the effect of reference medium
+
 \begin{enumerate}
-    \item 
+    \item \textbf{Measure and subtract the effect of the reference} One can measure  the impedance spectra of this base solution (reference medium) and subtract its effect to nullify its contribution.
+    
+    \item \textbf{Washing the medium with a non-conductive solution} We can measure the conductivity of our reference medium and repeatedly wash it with a non-conductive solution  till further washing makes a no significant change. This procedure eliminates any conductive bias present in our reference medium.
 \end{enumerate}
 
 
+\subsection{Modelling the system}
+This is the most important step to understand the Electrical behaviour of our system. Eventhough we shall be o able to quantify virus and acheive our goals, this modelling shall take us that extra mile and make this methodolgy applicable to other viruses. 
+
+For example, Ahmad et al. have performed electrical impedance measurements on Feline immunodeficiency virus (FIV) and
+human immunodeficiency virus (HIV).Although they belong to same family and similar in size, upon application of electric field the resistance increased, whereas in the other case the resistance decreased.This can  be interpretation/modelled as follows:
+
+As we discussed earlier, upon application of electrical field, the 
+charge separation takes place and thus one of the virus is acting as a diode in the forward bias whereas the other is acting as a reverse biased diode.
 
 
 
 
 
 
-\section{Execution}
+\subsection{Workflow}
+We have segmented the above methodology into two major blocks(parts) and further sub-steps  to fulfill the above methodology and is enumerated below:
+\begin{enumerate}
+    \item Isolating the covid virus antigens into a solution
+    
+    \item Performing the Electrical measurements to quantify them
+\end{enumerate}
+
+To complete each of  these blocks  sub-steps required are enumerated below.
+\subsubsection{Isolating the covid virus antigens into a solution (medium)}
+The sub-steps for obtaining the isolated covid virus antigens are enumerated below:
+    \begin{enumerate}
+        \item \textbf{Preparation/obtaining of virus along with its Quantification:} The virus is obtained from our collaborating biology company along with its quantification.
+    
+        \item \textbf{Conjugation of antibodies onto a non-reactive surface} Onto a non-reactive surface antibodies are conjugated, which in turn are used to capture the covid-19 antigens. As repeating washings by DPBS solution and centrifuging is involved to remove the supernatant, this non-reactant surface can be a magnetic bead. Then a magnetic seperator can be used to separate the supernatant. Thus, antibodies are conjugated onto a magnetic bead whose dimensions can go into a centrifuge tube. 
+        
+        \item \textbf{Capture covid-19 antigens using these conjugated magnetic beads:} The covid-19  antigens are captured onto these magnetic beads.
+        
+        \item \textbf{De-embedding the effect of medium:} As explained earlier, the impedance of this reference solution needs to be measured so that its effects can be negated from the lysed solution to quantify virus. Described above in detail.
+        
+        
+        \item  \textbf{Viral Lysing} The lysing of the virus is to bring retroviral enzymes, membrane phospholipids , capsid proteins and proteins, intracellular ions,  and nucleic acids into solution
+        
+    \end{enumerate}
+
+
+\subsection{Performing the Electrical measurements to quantify viruses} Inside an open-ended coaxial cable these virus suspensions shall be loaded. Then, different frequencies from  few mHz to few MHz frequencies shall be used to obtain the frequency response of the virus suspension. As the literature survey suggests that the response shall be maximum near MHz frequencies, the system shall be built which can go up to few MHz. The oscillation voltage shall be 15 to 20 mV peak to peak. Care shall be taken that the coaxial cables self-resonance frequency is much farther away ($\sim$ few 100 MHz) from the afore-mentioned range. 
+
+After loading the virus suspension, IV (current-voltage) and CV (capacitance voltage) characteristics shall be performed. Then an algorithm based on semi conductor theory shall be used to extract the electrical parameters. Once, the quantification procedure is established, it shall be automated to a plug and play mode to quantify the virus using Micro-controllers.
+
+
+
+
+
+\newpage
+\section{Execution and Validation}
+
+
+
+
+
 \subsection{Facilities, Equipment and Other Resources}
-\subsection{Data, Infrastrucure and software needs}
-
-
-
-\section{Validation}
 
 
 
 
 
+\subsection{Data, Infrastructure and software needs}
+
+
+
+\section{Requested Grant details}
+
+\subsection{Table }
+Here a few examples of tables and graphs.
+\subsection{Tabelle}
+\begin{center}
+\begin{tabular}{c c c  }
+\arrayrulecolor{Azzurro}
+\hline
+{\bfseries S.No} & {\bfseries Item Description} & {\bfseries Unit Price} \\
+\hline
+1 & 12 & 250\\
+\hline
+
+\hline
+\end{tabular}
+\end{center}
+
+
+
+
+
+
+
+
+
+Here a few examples of tables and graphs.
+\subsection{Tabelle}
+\begin{center}
+\begin{tabular}{c c c c c c c c}
+\arrayrulecolor{Azzurro}
+\hline
+{\bfseries $Codice$} & {\bfseries $CdL$} & {\bfseries $Lotto$} & {\bfseries $T_{setup/lotto}$} & {\bfseries $T_{lav/pezzo}$} & {\bfseries $T_{proc/pezzo}$} & {\bfseries$Quantit\grave{a}$} & {\bfseries $T_{tot}$}\\
+\hline
+100 & 4 & 250 & 25 & 0,5 & 0,6 & 1 & 0,6\\
+111 & 2 & 250 & 20 & 2 & 2,08 & 1 & 2,08 \\
+111 & 3 & 250 & 15 & 1,5 & 1,56 & 1 & 1,56 \\
+112 & 2 & 250 & 20 & 2,5 & 2,58 & 1 & 2,58 \\
+112 & 3 & 250 & 15 & 2 & 2,06 & 1 & 2,06\\
+113 & 3 & 500 & 15 & 1 & 1,03 & 2 & 2,06\\
+120 & 1 & 50 & 30 & 2 & 2,6 & 0,1 & 0,26\\
+121 & 1 & 25 & 30 & 3 & 4,2 & 0,1 & 0,42 \\
+121 & 1 & 25 & 30 & 2,5 & 3,7 & 0,1 & 0,37 \\
+\hline
+\end{tabular}
+\end{center}
 
 
 
