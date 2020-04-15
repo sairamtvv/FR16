@@ -101,24 +101,17 @@ BoldItalicFont=ArnoPro-BoldItalic
 %--Titolo--
 \renewcommand{\maketitle}{
 \thispagestyle{empty}
-\begin{figure}
-\vspace{-1cm}
-\centering
-\includegraphics[width=0.6\textwidth]{univlogo.png}\\[1cm]
-\end{figure}
+
 
 \begin{center}
-\textcolor{Blu}{\sc\centering\onehalfspacing\fontsize{4mm}{6mm}\selectfont Dipartimento di Ingegneria Meccanica e Aerospaziale\\Università di Roma La Sapienza\\Corso di Ingegneria Meccanica\\[1cm]}
-\end{center}
-\begin{center}
-\Large\bfseries\sc Subject\\[0.5cm] \bfseries\Huge\sc Title\\[0.3cm]\normalsize\sc Subtitle\\ 
+\Large\bfseries\sc Report\\[0.5cm] \bfseries\Huge\sc A Diagnosis methodology to COVID Detection: A Physics route\\[0.3cm]\normalsize\sc Subtitle\\ 
 \end{center}
 
 
-\vspace{-2cm}
+\vspace{2cm}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{rocket.png}
+\includegraphics[width=0.8\textwidth]{coronavirus.jpg}
 \end{figure}
 
 
